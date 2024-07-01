@@ -1,0 +1,50 @@
+{
+    "env": {
+        "node": true,
+        "es2021": true
+    },
+    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint", "simple-import-sort"],
+    "rules": {
+        // Possible Errors
+        "no-console": "warn", // Warn when console statements are used
+        "no-debugger": "warn", // Warn when debugger statements are used
+        "no-extra-semi": "error", // Disallow unnecessary semicolons
+
+        // Best Practices
+        "curly": "error", // Require consistent use of curly braces for blocks
+        "eqeqeq": ["error", "always"], // Require the use of === and !==
+        "no-multi-spaces": "error", // Disallow multiple spaces
+
+        // Variables
+        "no-unused-vars": "warn", // Warn when there are unused variables
+        "no-undef": "error", // Disallow the use of undeclared variables
+
+        // Stylistic Issues
+        "semi": ["error", "always"], // Require semicolons at the end of statements
+        "quotes": ["error", "double"], // Enforce the consistent use of single quotes
+        "indent": ["error", 4], // Enforce consistent indentation (2 spaces)
+        "comma-dangle": ["error", "never"], // Disallow trailing commas
+        "space-before-function-paren": ["error", "never"], // Disallow space before function parentheses
+        "keyword-spacing": ["error", { "before": true, "after": true }], // Enforce consistent spacing before and after keywords
+
+        // ECMAScript 6
+        "arrow-spacing": ["error", { "before": true, "after": true }], // Enforce consistent spacing before and after the arrow in arrow functions
+        "no-var": "error", // Disallow the use of var and encourage the use of let or const
+        "prefer-const": "error", // Suggest using const for variables that are never reassigned after declared
+
+        // TypeScript-specific
+        "@typescript-eslint/no-unused-vars": "warn", // Warn when there are unused variables
+        "@typescript-eslint/no-explicit-any": "off", // Allow the use of the any type (you can turn this on if you want stricter type checking)
+        "@typescript-eslint/explicit-module-boundary-types": "off", // Allow functions to not have explicit return types
+
+        // simple-sort
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error"
+    }
+}
