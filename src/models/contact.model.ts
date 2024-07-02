@@ -13,14 +13,14 @@ class Contact {
     @PrimaryGeneratedColumn()
     id!: number;
 
-    @Column({ nullable: true })
-    phoneNumber?: string;
+    @Column({ type: "varchar", nullable: true })
+    phoneNumber?: string | null;
 
-    @Column({ nullable: true })
-    email?: string;
+    @Column({ type: "varchar", nullable: true })
+    email?: string | null;
 
-    @Column({ nullable: true })
-    linkedId?: number;
+    @Column({ type: "int", nullable: true })
+    linkedId?: number | null;
 
     @Column({
         type: "enum",
@@ -36,7 +36,7 @@ class Contact {
     updatedAt!: Date;
 
     @DeleteDateColumn()
-    deletedAt!: Date;
+    deletedAt!: Date | null;
 }
 
 export default Contact;

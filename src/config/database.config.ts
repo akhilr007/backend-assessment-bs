@@ -10,7 +10,7 @@ const databaseConfig: DataSourceOptions = {
     ssl: {
         rejectUnauthorized: false // This is necessary for Neon DB
     },
-    entities: ["src/models/**/*.ts"],
+    entities: ["dist/models/*.js"],
     synchronize: true // Be careful with this in production
 };
 

@@ -1,9 +1,9 @@
 import { Router } from "express";
 
-import { identity } from "../controllers/contact.controller";
+import { identify } from "../controllers/contact.controller";
 
 const apiRouter: Router = Router();
 
-apiRouter.get("/", identity);
+apiRouter.post("/", identify);
 
 export default apiRouter;
