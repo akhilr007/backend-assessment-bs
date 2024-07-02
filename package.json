@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "prepare": "npm install",
         "prebuild": "npm install && npm list typescript",
         "build": "npx tsc",
         "watch": "npx tsc -w",
