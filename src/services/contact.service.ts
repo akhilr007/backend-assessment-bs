@@ -3,7 +3,9 @@ import { In, Repository } from "typeorm";
 import Contact from "../models/contact.model";
 
 class ContactService {
-    constructor(private contactRepository: Repository<Contact>) {}
+    constructor(private contactRepository: Repository<Contact>) {
+        this.contactRepository = contactRepository;
+    }
 
     async identify(email?: string, phoneNumber?: string): Promise<any> {
         const allRelatedContacts = await this.findAllRelatedContacts(
