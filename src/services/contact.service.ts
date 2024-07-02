@@ -56,7 +56,7 @@ class ContactService {
                 oldest.createdAt < current.createdAt ? oldest : current
             );
 
-            console.log("primary contact", primaryContact);
+            // console.log("primary contact", primaryContact);
 
             // Update all other contacts to be secondary
             for (const contact of allRelatedContacts) {
