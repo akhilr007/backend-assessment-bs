@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "prebuild": "npm install && npm run lint:fix",
         "build": "npx tsc",
         "watch": "npx tsc -w",
         "prestart": "npm run build",
