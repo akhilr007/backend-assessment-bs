@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "prebuild": "npm install",
+        "prepare": "npm install",
+        "prebuild": "npm install && npm list typescript",
         "build": "npx tsc",
         "watch": "npx tsc -w",
         "prestart": "npm run build",
@@ -33,5 +34,8 @@
         "pg": "^8.12.0",
         "reflect-metadata": "^0.2.2",
         "typeorm": "^0.3.20"
+    },
+    "engines": {
+        "node": "22.2.0"
     }
 }
